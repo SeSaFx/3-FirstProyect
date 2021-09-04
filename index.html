@@ -1,0 +1,137 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3-Proyecto Base</title>
+  <script type="module" src="./src/app.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+  <div id="renderScene" >
+    <div id="backBtn" class="botonesGod">Return</div>
+    <div id="createCubeBtn">Create Cube</div>
+     <div id="createSphereBtn">Create Sphere</div>
+     
+    <div id="createAmbientBtn">Create Ambient Light</div> 
+    <div id="createSpotBtn">Create Spot Light</div> 
+    <div id="createPointBtn">Create Point Light</div> 
+    <div id="createDirectionalBtn">Create Directional Light</div> 
+
+    <!-- <div id="createLightBtn">Create Light</div> 
+    <div id="createAmbientBtn">Create Ambient Light</div>  -->
+<!--     <div id="createSpotBtn">Create Spot Light</div> 
+    <div id="createPointBtn">Create Point Light</div> 
+    <div id="createDirectionalBtn">Create Directional Light</div>  -->
+  </div>
+
+  <div id="content">
+    <div class="btnOption small" data-size="10">
+      <div class="title">Small</div>
+      <span>10x10</span>
+    </div>
+    <div class="btnOption medium" data-size="20">
+      <div class="title">Medium</div>
+      <span>20x20</span>
+    </div>
+    <div class="btnOption big" data-size="40">
+      <div class="title">Big</div>
+      <span>40x40</span>
+    </div>
+
+     <div class="btnOption custom" id="custom">
+      <div class="title">Custom</div>
+      <span>?</span>
+      
+    </div> 
+    <div id="customBtn">
+      <label>Digite la dimension del plano<br><br></label>
+      <label>(Ejemplo:20=20x20)  (5=5x5)<br><br></label>
+      <input type="text" name="" id="customInput" >
+     <!--  <div><span id="send">Enviar</span></div> -->
+    </div>
+    
+  </div>
+  <script type="module">
+    import { main, reset, cleanGUI, createCubeGeneric,  createSphereGeneric, createAmbientLight, createSpotLight, createPointLight, createDirectionalLight } from './src/app.js';
+
+    const options = document.querySelectorAll('.btnOption');
+    const content = document.querySelector('#content');
+    const backBtn = document.querySelector('#backBtn');
+    const createCubeBtn = document.querySelector('#createCubeBtn');
+    const createSphereBtn = document.querySelector('#createSphereBtn');
+    
+    const createAmbientBtn = document.querySelector('#createAmbientBtn');
+    const createSpotBtn = document.querySelector('#createSpotBtn');
+    const createPointBtn = document.querySelector('#createPointBtn');
+    const createDirectionalBtn = document.querySelector('#createDirectionalBtn');
+
+    /* const createAmbientBtn = document.querySelector('#createAmbientBtn'); */
+/*     const createSpotBtn = document.querySelector('#createSpotBtn');
+    const createPointBtn = document.querySelector('#createPointBtn');
+    const createDirectionalBtn = document.querySelector('#createDirectionalBtn'); */
+    
+   
+let size = 10;
+
+    options.forEach(optionSelected => {
+      optionSelected.onclick = function(){
+        const optionSize = this.dataset.size;
+        size = optionSize;
+        toogleContent();
+        main(size);
+      }
+    });
+
+    backBtn.onclick = function(){
+      toogleContent();
+      cleanGUI();
+      reset();
+    }
+    
+    createCubeBtn.onclick = function(){
+      createCubeGeneric();
+    }
+
+    createSphereBtn.onclick = function(){
+      createSphereGeneric();
+    }
+
+    custom.onclick = function(){
+      let CustomSize = document.getElementById("customInput").value;
+      size = CustomSize;
+      main(size);
+      toogleContent();
+    }
+
+
+    createAmbientBtn.onclick = function(){
+      createAmbientLight();
+    }
+
+    createSpotBtn.onclick = function(){
+      createSpotLight();
+    }
+
+    createPointBtn.onclick = function(){
+      createPointLight();
+    }
+
+    createDirectionalBtn.onclick = function(){
+      createDirectionalLight();
+    }
+
+
+   
+
+    function toogleContent (){
+      content.style.display = content.style.display == 'none' ? 'flex' : 'none';
+    }
+  </script>
+</body>
+
+</html>

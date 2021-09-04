@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  body #backBtn {
+    border-radius: 50px;
+    width: 15vw;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    cursor: pointer;
+    border: 5px solid #000000;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    font-weight: 600;
+
+  }
+
+  
+  body #renderScene {
+    display: flex;
+    position: fixed;
+    flex-flow: column;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  body #renderScene #createCubeBtn {
+    border: 2px solid #ffffff;
+    background: rgb(0, 0, 0);
+    width: 15vw;
+    height: 5vh;
+    margin: 2vw 0;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  body #content #customInput{
+      margin: 2;
+      padding: 5px;
+  }
+  body #renderScene #createSphereBtn {
+    border: 2px solid #ecf0f1;
+    background: rgb(0, 0, 0);
+    width: 15vw;
+    height: 5vh;
+    margin: -1vw 0;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+
+  body label{
+    font-size: 15px;
+    font-weight: bold;
+    background: black;
+    color: white;
+  }
+
+
+  body #renderScene #createAmbientBtn {
+    border: 2px solid #ffffff;
+    background: rgb(0, 0, 0);
+    width: 15vw;
+    height: 5vh;
+    margin: 2vw 0;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+
+  body #renderScene #createSpotBtn {
+    border: 2px solid #ffffff;
+    background: rgb(0, 0, 0);
+    width: 15vw;
+    height: 5vh;
+    margin: -1vw 0;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+
+  body #renderScene #createPointBtn {
+    border: 2px solid #ecf0f1;
+    background: rgb(0, 0, 0);
+    width: 15vw;
+    height: 5vh;
+    margin: 2vw 0;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+
+  body #renderScene #createDirectionalBtn {
+    border: 2px solid #ffffff;
+    background: rgb(0, 0, 0);
+    width: 15vw;
+    height: 5vh;
+    margin: -1vw 0;
+    border-radius: 15px;
+    padding: 5px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+
+
+  body #content {
+    display: flex;
+    position: fixed;
+    background: #000000;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+  }
+
+ 
+  
+  body #content .btnOption {
+    border: 5px solid #ffffff;
+    width: 15vw;
+    height: 13vh;
+    margin: 1vw;
+    /* border-radius: 15px; */
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  
+  body #content .btnOption:hover {
+    width: 17vw;
+    height: 22vh;
+    
+  }
+  
+  body #content .btnOption .title {
+    font-size: 150%;
+    margin-bottom: 2px;
+  }
+
+  body #renderScene .botonesGod :hover{
+    height: 15;
+    width: 17;
+  }
+  
+  .small {
+    background: #000000;
+  }
+  .medium {
+    background: rgb(0, 0, 0);
+  }
+  .big {
+    background: rgb(0, 0, 0);
+  }
+  .custom {
+    background: #000000;
+  }
